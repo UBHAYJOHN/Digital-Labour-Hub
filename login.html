@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login or Register - Digital Labor Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="auth-container">
+    <h1>Welcome to Digital Labor Hub</h1>
+    <div class="tabs">
+      <button id="loginTab" class="tab active">Login</button>
+      <button id="registerTab" class="tab">Register</button>
+    </div>
+
+    <div id="loginForm" class="form active">
+      <input type="text" placeholder="Phone Number" required>
+      <button class="submit-btn">Login</button>
+    </div>
+
+    <div id="registerForm" class="form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Phone Number" required>
+      <select>
+        <option>Select Role</option>
+        <option value="worker">Worker</option>
+        <option value="employer">Employer</option>
+      </select>
+      <select>
+        <option>Select Language</option>
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ta">தமிழ்</option>
+        <option value="bn">বাংলা</option>
+      </select>
+      <button class="submit-btn">Register</button>
+    </div>
+  </div>
+
+  <script>
+    const loginTab = document.getElementById('loginTab');
+    const registerTab = document.getElementById('registerTab');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+
+    loginTab.addEventListener('click', () => {
+      loginForm.classList.add('active');
+      registerForm.classList.remove('active');
+      loginTab.classList.add('active');
+      registerTab.classList.remove('active');
+    });
+
+    registerTab.addEventListener('click', () => {
+      registerForm.classList.add('active');
+      loginForm.classList.remove('active');
+      registerTab.classList.add('active');
+      loginTab.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

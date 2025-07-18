@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f5f5f5, #e3d7c1);
+  color: #333;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #163147;
+  padding: 1rem 2rem;
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+}
+
+
+.logo {
+  font-weight: 900;
+  font: size 10px;
+}
+
+.lang-select {
+  background: rgb(79, 191, 139);
+  color: #131111;
+  padding: 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 5%;
+  min-height: calc(100vh - 120px); /* Full height minus header/footer */
+  gap: 3rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+  color: #2f4858;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #555;
+  max-width: 600px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.cta-buttons a {
+  background-color: #00a86b;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.cta-buttons a:hover {
+  transform: scale(1.05);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Add this to your CSS file (e.g. styles.css or shared.css) */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #163147;
+  padding: 1rem 2rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.nav-links {
+  padding-right: 80px;
+  margin-top: 50px;
+  list-style: none;
+  display: flex;
+  gap: 8rem;
+  
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00c897;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #ddd4c0;
+  font-size: 1rem;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons a {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
